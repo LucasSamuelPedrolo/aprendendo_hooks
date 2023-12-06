@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
+//aqui aonde você pode criar o site de uma maneira mais eficiente e pratica
+
 function App() {
+
+  const ApiConection = async () => {
+    const api = 'https://jsonplaceholder.typicode.com/photos';
+
+    fetch(api).then(response => {response.json()}).then(json => console.log(json))
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className=''>
+        <h1>opa</h1>
+      </div>
+    </>
+  )
 }
 
 export default App;
