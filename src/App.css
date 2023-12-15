@@ -1,1 +1,7 @@
 /* aqui css do app */
+
+.groupImage{
+    width: 100%;
+    height: 100vh;
+    color: aliceblue;
+}

@@ -9,26 +9,38 @@ function App() {
 
   useEffect(() => {
     const api = 'https://jsonplaceholder.typicode.com/photos';
-    let imagens = [];
-    
-    fetch(api).then(response => response.json()).then(json => json.map(value => {
-      console.log(value, json.value)
-      if(json.value[id] < 10){
-        imagens.push(value)
-      } 
-    }));
+    const maxQuantityImage = [];
+    let imageQuantity = 0;
 
-}, []);
+    fetch(api)
+      .then(response => response.json())
+      .then(function (json) {
+        while (imageQuantity < 100) {
+          maxQuantityImage.push(json[imageQuantity]);
+          imageQuantity++
+        }
+      });
 
+    setImagens(maxQuantityImage);
 
-return (
-  <>
-    {console.log(imagens)}
-    <div>
-      <h1>opa</h1>
-    </div>
-  </>
-)
-};
+  }, []);
+
+  return (
+      <div>
+        <div className='groupImage'>
+          {imagens.map((image) => {
+            return (
+              <div className='imageContent' key={image.id}>
+                <img src={image.url} alt={image.title}></img>
+                <h2>{image.title}</h2>
+                <p>Texto ficticio de teste para a imagem de nº {image.id}</p>
+              </div>
+            )
+          })}
+        </div>
+        <h1>opa</h1>
+      </div>
+  );
+}
 
 export default App;
