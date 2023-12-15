@@ -26,20 +26,21 @@ function App() {
   }, []);
 
   return (
-      <div>
-        <div className='groupImage'>
-          {imagens.map((image) => {
-            return (
-              <div className='imageContent' key={image.id}>
-                <img src={image.url} alt={image.title}></img>
-                <h2>{image.title}</h2>
-                <p>Texto ficticio de teste para a imagem de nº {image.id}</p>
-              </div>
-            )
-          })}
-        </div>
-        <h1>opa</h1>
+    <div className='content'>
+      <h1 className='title'>opa</h1>
+      <div className='groupImage'>
+        {imagens.map(img => {
+          return (
+            <div className='imageContent' key={img.id}>
+              {console.log(img.id)}
+              <img src={img.url} alt={img.title}></img>
+              <h2>{img.title}</h2>
+              <p>Texto ficticio de teste para a imagem de nº {img.id}</p>
+            </div>
+          )
+        })}
       </div>
+    </div>
   );
 }
 
