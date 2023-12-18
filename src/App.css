@@ -13,6 +13,7 @@
 
 .groupImage {
     display: grid;
+    width: 90%;
     grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     max-width: 1200px;
     margin: 0 auto;
@@ -29,7 +30,7 @@
     transition: transform 100ms ease-in-out;
 }
 
-.imageContent:hover{
+.imageContent:hover {
     transform: scale(1.03);
 }
 
@@ -40,4 +41,58 @@
 .imageContent h2,
 .imageContent p {
     padding: 0 1em;
+}
+
+.imageFocus {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgb(35, 35, 36);
+    height: 50vh;
+    margin-bottom: 2em;
+    position: relative;
+}
+
+.buttonNext {
+    width: 2em;
+    text-align: center;
+    height: 100%;
+    font-size: 2em;
+    color: white;
+    background-color: transparent;
+    position: absolute;
+}
+
+.buttonNext:hover {
+    border: solid 0.1em rgb(63, 250, 119);
+}
+
+.close {
+    text-align: center;
+    width: 2em;
+    height: 2em;
+    font-size: 1.3em;
+    color: white;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 3.5em;
+    top: 1em;
+}
+
+.close:hover {
+    border: 0.1em solid white;
+    border-radius: 0.1em;
+}
+
+#left {
+    left: 0;
+}
+
+#right {
+    right: 0;
 }
