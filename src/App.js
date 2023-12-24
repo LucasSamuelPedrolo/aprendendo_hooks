@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { PostImage } from './components/PostImage';
+import { ImageFocusEvent } from './components/ImageFocusEvent/imgFocus';
 
 
 //aqui aonde você pode criar o site de uma maneira mais eficiente e pratica
@@ -35,12 +36,9 @@ function App() {
 
   return (
     <div className='content'>
-      <h1 className='title'>opa</h1>
+      <h1 className='title'>Imagens aleatorias!</h1>
       <div className='imageFocus'>
-        <button type='button' className='buttonNext' id='left'>&lt;</button>
-        <div className='imageFocusContent'></div>
-        <button type='button' className='close'>X</button>
-        <button type='button' className='buttonNext' id='right'>&gt;</button>
+        <ImageFocusEvent />
       </div>
 
       <div className='groupImage'>
