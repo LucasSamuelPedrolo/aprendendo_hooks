@@ -57,6 +57,10 @@
     position: relative;
 }
 
+.hidden {
+    display: none;
+}
+
 .buttonNext {
     width: 2em;
     text-align: center;

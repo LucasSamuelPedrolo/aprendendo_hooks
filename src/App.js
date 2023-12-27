@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import { PostImage } from './components/PostImage';
-import { ImageFocusEvent } from './components/ImageFocusEvent/imgFocus';
+import { ImageFocusCard } from './components/ImageFocusCard/imageFocus';
 
 
 //aqui aonde você pode criar o site de uma maneira mais eficiente e pratica
-
-const clickElement = (props) => {
-  console.log(props.id)
-}
 
 function App() {
 
   const [imagens, setImagens] = useState([]);
   const [loading, setLoading] = useState(false);
-  console.log('pai renderizou')
 
   useEffect(() => {
     const api = 'https://jsonplaceholder.typicode.com/photos';
@@ -37,9 +32,12 @@ function App() {
   return (
     <div className='content'>
       <h1 className='title'>Imagens aleatorias!</h1>
-      <div className='imageFocus'>
-        <ImageFocusEvent />
-      </div>
+
+      {haveImg => (
+        <div className='imageFocus hidden'>
+          <ImageFocusCard />
+        </div>
+      )}
 
       <div className='groupImage'>
         <PostImage

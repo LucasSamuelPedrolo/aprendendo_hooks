@@ -1,5 +1,4 @@
-export const ImageFocusEvent = () => {
-    console.log('sou chamado');
+export const ImageFocusCard = () => {
     return (
         <>
             <button type='button' className='buttonNext' id='left'>&lt;</button>
