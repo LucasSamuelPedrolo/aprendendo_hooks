@@ -1,7 +1,3 @@
-import { testeFunc } from "../testeFunc/func";
-
-const func = testeFunc;
-
 export const PostImage = ({ loadingConfirmation, imagensList }) => {
 
   const loading = loadingConfirmation;
@@ -10,7 +6,7 @@ export const PostImage = ({ loadingConfirmation, imagensList }) => {
   return (
     <>
       {loading && imagens.map((img) => (
-        <div className='imageContent' key={img.id} props={img} onClick={func}>
+        <div className='imageContent' key={img.id}>
           <img src={img.url} alt={img.title}></img>
           <h2>{img.title}</h2>
           <p>Texto ficticio de teste para a imagem de nº {img.id}</p>

@@ -32,12 +32,10 @@ function App() {
   return (
     <div className='content'>
       <h1 className='title'>Imagens aleatorias!</h1>
-
-      {haveImg => (
-        <div className='imageFocus hidden'>
-          <ImageFocusCard />
-        </div>
-      )}
+      
+      <div className='imageFocus hidden'>
+        <ImageFocusCard />
+      </div>
 
       <div className='groupImage'>
         <PostImage
